@@ -1,0 +1,15 @@
+.DS_Store
+.claude/settings.local.json
+__pycache__/
+*.pyc
+.venv/
+
+# Go
+/kiss
+/dist/
+*.test
+*.out
+coverage.txt
+
+# Stray key material (keys live in ~/.swamp, never in-repo)
+/.swamp/
