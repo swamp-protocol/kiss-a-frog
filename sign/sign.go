@@ -23,8 +23,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/peterkaminski-ai/kiss-a-frog/internal/canonical"
-	"github.com/peterkaminski-ai/kiss-a-frog/internal/did"
+	"github.com/swamp-protocol/kiss-a-frog/canonical"
+	"github.com/swamp-protocol/kiss-a-frog/did"
 )
 
 const (

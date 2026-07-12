@@ -38,7 +38,7 @@ Pre-release identifiers (`v0.2.0-rc1`, `v0.2.0-alpha`) are valid; goreleaser's `
    ```
    The workflow fires automatically on tag push.
 
-5. **Watch the workflow.** Actions tab: <https://github.com/peterkaminski-ai/kiss-a-frog/actions>. Typical run is ~2 minutes. On failure, the tag persists; delete it (`git tag -d v0.X.Y && git push --delete origin v0.X.Y`) before retrying after a fix.
+5. **Watch the workflow.** Actions tab: <https://github.com/swamp-protocol/kiss-a-frog/actions>. Typical run is ~2 minutes. On failure, the tag persists; delete it (`git tag -d v0.X.Y && git push --delete origin v0.X.Y`) before retrying after a fix.
 
 6. **Verify the release.** Releases page should have:
    - Six archive files: `kiss-a-frog_0.X.Y_{darwin,linux,windows}_{amd64,arm64}.{tar.gz,zip}`

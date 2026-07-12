@@ -14,7 +14,7 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/peterkaminski-ai/kiss-a-frog/internal/base58"
+	"github.com/swamp-protocol/kiss-a-frog/base58"
 )
 
 // Prefix bytes for ed25519-pub multicodec (0xed, varint-encoded).

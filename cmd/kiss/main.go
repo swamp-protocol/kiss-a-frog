@@ -13,8 +13,8 @@ import (
 	"io/fs"
 	"os"
 
-	"github.com/peterkaminski-ai/kiss-a-frog/internal/keys"
-	"github.com/peterkaminski-ai/kiss-a-frog/internal/sign"
+	"github.com/swamp-protocol/kiss-a-frog/keys"
+	"github.com/swamp-protocol/kiss-a-frog/sign"
 )
 
 // Populated by goreleaser via -ldflags at release build time.

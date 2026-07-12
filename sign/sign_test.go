@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/peterkaminski-ai/kiss-a-frog/internal/did"
+	"github.com/swamp-protocol/kiss-a-frog/did"
 )
 
 // buildPost assembles a minimal valid-looking Swamp post using the provided DID.

@@ -16,7 +16,7 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/peterkaminski-ai/kiss-a-frog/internal/did"
+	"github.com/swamp-protocol/kiss-a-frog/did"
 )
 
 const (

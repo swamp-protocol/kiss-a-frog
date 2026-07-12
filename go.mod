@@ -1,3 +1,3 @@
-module github.com/peterkaminski-ai/kiss-a-frog
+module github.com/swamp-protocol/kiss-a-frog
 
 go 1.22
