@@ -31,6 +31,7 @@ type Meta struct {
 	DID         string    `json:"did"`
 	DisplayName string    `json:"display_name,omitempty"`
 	AuthoredBy  string    `json:"authored_by,omitempty"`
+	Derivation  string    `json:"derivation,omitempty"` // e.g. "bip39/slip10 m/0'" for words-born keys; never the words themselves
 	CreatedAt   time.Time `json:"created_at"`
 }
 
@@ -60,6 +61,14 @@ func New(displayName, authoredBy string) (*Key, error) {
 	if err != nil {
 		return nil, fmt.Errorf("keygen: %w", err)
 	}
+	return Store(pub, priv, displayName, authoredBy, "")
+}
+
+// Store writes an existing Ed25519 keypair to the keystore, exactly as New
+// does for a fresh one. derivation, if non-empty, is recorded in meta.json
+// (e.g. "bip39/slip10 m/0'" for a words-born key — SPEC §3.3 forbids storing
+// the words themselves; only the derived key is kept).
+func Store(pub ed25519.PublicKey, priv ed25519.PrivateKey, displayName, authoredBy, derivation string) (*Key, error) {
 	d, err := did.Encode(pub)
 	if err != nil {
 		return nil, err
@@ -98,6 +107,7 @@ func New(displayName, authoredBy string) (*Key, error) {
 		DID:         d,
 		DisplayName: displayName,
 		AuthoredBy:  authoredBy,
+		Derivation:  derivation,
 		CreatedAt:   time.Now().UTC(),
 	}
 	if err := writeMeta(dir, meta); err != nil {

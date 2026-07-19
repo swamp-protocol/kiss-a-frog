@@ -17,12 +17,12 @@ import (
 // reminder to bump them when the spec moves.
 func buildPost(d string) string {
 	return strings.Join([]string{
-		"Swamp-Version: 0.3.0",
+		"Swamp-Version: 0.7.0",
 		"From: Test",
 		"DID: " + d,
 		"Message-ID: 2026-04-24-test-abcd",
 		"Date: 2026-04-24T10:00-0700",
-		"Content-Type: application/swamp; kind=post; v=0.3.0",
+		"Content-Type: application/swamp; kind=post; v=0.7.0",
 		"",
 		"Hello, Swamp.",
 		"",
